@@ -562,8 +562,8 @@ def main():
         set_mount_options()
     ensure_sticky_bit()
     disable_automounting()
-    enable_aide()
-    secure_boot_settings()
+    #enable_aide()
+    #secure_boot_settings()
     apply_process_hardenings()
     configure_warning_banners()
     ensure_updated()
@@ -577,18 +577,18 @@ def main():
     remove_insecure_clients()
 
     # 3 Network Configuration
-    configure_host_network_params()
-    configure_network_params()
-    configure_ipv6_params()
-    if not args.disable_tcp_wrappers:
-        configure_tcp_wrappers(args.clients)
-    disable_uncommon_protocols()
-    if not args.disable_iptables:
-        configure_iptables()
+    #configure_host_network_params()
+    #configure_network_params()
+    #configure_ipv6_params()
+    #if not args.disable_tcp_wrappers:
+    #    configure_tcp_wrappers(args.clients)
+    #disable_uncommon_protocols()
+    #if not args.disable_iptables:
+    #    configure_iptables()
 
     # 4 Logging and Auditing
-    configure_rsyslog()
-    configure_log_file_permissions()
+    #configure_rsyslog()
+    #configure_log_file_permissions()
 
     # 5 Access, Authentication and Authorization
     configure_cron()
