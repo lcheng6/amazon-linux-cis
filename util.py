@@ -101,8 +101,9 @@ class File:
     def write(self, content):
         """Writes a content into the ile"""
         ensure_backed_up(self.path)
+        content_string = content.decode("utf-8") 
         with open(self.path, 'w') as f:
-            f.write(content)
+            f.write(content_string)
 
 
 class PropertyFile:
